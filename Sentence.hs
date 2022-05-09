@@ -4,6 +4,8 @@ import Data.Char( toLower )
 
 sentence :: [Int] -> String
 sentence ks =
+  --"This sentence contains "
+  --"No sentence can possibly have exactly "
   "This sentence generated in New York contains "
   ++ andIt [ number k ++ " "
                       ++ [c]
@@ -42,5 +44,5 @@ count :: String -> [Int]
 count s = [ length (filter ((c==) . toLower) s) | c <- ['a'..'z'] ]
 
 check :: [Int] -> Bool
-check xs = length xs == 26 && count (sentence xs) == xs
+check xs = count (sentence xs) == xs
 
