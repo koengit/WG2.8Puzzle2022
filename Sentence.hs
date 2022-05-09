@@ -6,6 +6,7 @@ sentence :: [Int] -> String
 sentence ks =
   --"This sentence contains "
   --"No sentence can possibly have exactly "
+  --"This Haskell-generated sentence has "
   "This sentence generated in New York contains "
   ++ andIt [ number k ++ " "
                       ++ [c]
